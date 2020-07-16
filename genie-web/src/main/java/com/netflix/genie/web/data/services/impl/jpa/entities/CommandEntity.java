@@ -36,7 +36,6 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
@@ -204,7 +203,6 @@ public class CommandEntity extends BaseEntity {
     @Min(1)
     private Integer memory;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "launcher_ext", columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)

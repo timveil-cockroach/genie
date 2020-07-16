@@ -53,7 +53,6 @@ import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.MapKeyColumn;
@@ -535,14 +534,12 @@ public class JobEntity extends BaseEntity implements
     @Column(name = "job_directory_location", length = 1024)
     private String jobDirectoryLocation;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "requested_agent_config_ext", updatable = false, columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)
     @ToString.Exclude
     private JsonNode requestedAgentConfigExt;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "requested_agent_environment_ext", updatable = false, columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)
@@ -561,14 +558,12 @@ public class JobEntity extends BaseEntity implements
     @Column(name = "archive_status", length = 20)
     private String archiveStatus;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "requested_launcher_ext", columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)
     @ToString.Exclude
     private JsonNode requestedLauncherExt;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "launcher_ext", columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)

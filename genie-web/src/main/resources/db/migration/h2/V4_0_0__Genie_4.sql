@@ -85,9 +85,9 @@ ALTER TABLE `jobs`
 ALTER TABLE `jobs`
   ADD COLUMN `requested_job_directory_location` VARCHAR(1024) DEFAULT NULL;
 ALTER TABLE `jobs`
-  ADD COLUMN `requested_agent_config_ext` TEXT DEFAULT NULL;
+  ADD COLUMN `requested_agent_config_ext` LONGVARCHAR DEFAULT NULL;
 ALTER TABLE `jobs`
-  ADD COLUMN `requested_agent_environment_ext` TEXT DEFAULT NULL;
+  ADD COLUMN `requested_agent_environment_ext` LONGVARCHAR DEFAULT NULL;
 ALTER TABLE `jobs`
   ALTER COLUMN `disable_log_archival` RENAME TO `archiving_disabled`;
 ALTER TABLE `jobs`

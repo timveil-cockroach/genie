@@ -31,7 +31,6 @@ import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotBlank;
@@ -83,7 +82,6 @@ public class BaseEntity extends UniqueIdEntity implements BaseProjection, SetupF
     @Size(max = 1000, message = "Max length in database is 1000 characters")
     private String description;
 
-    @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column(name = "metadata", columnDefinition = "TEXT DEFAULT NULL")
     @Convert(converter = JsonAttributeConverter.class)
