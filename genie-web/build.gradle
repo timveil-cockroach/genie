@@ -59,6 +59,15 @@ dependencies {
     api("org.springframework.integration:spring-integration-zookeeper")
     api("org.springframework.retry:spring-retry")
 
+    // dependency override to match transitive dependencies from CRDB Dialect
+    api("org.hibernate.common:hibernate-commons-annotations:5.1.0.Final")
+    api("org.dom4j:dom4j:2.1.1")
+    api("com.fasterxml:classmate:1.5.1")
+    api("antlr:antlr:2.7.7")
+    api("net.bytebuddy:byte-buddy:1.10.7")
+    api("org.javassist:javassist:3.24.0-GA")
+    api("org.jboss:jandex:2.1.1.Final")
+
     /*******************************
      * Implementation Dependencies
      *******************************/

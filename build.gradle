@@ -41,6 +41,9 @@ allprojects {
 
     repositories {
         jcenter()
+        maven {
+            url myMavenRepoReadUrl
+        }
     }
 }
 
@@ -137,6 +140,10 @@ configure(javaProjects) {
             dependency("org.codehaus.groovy:groovy-all:2.5.9")
             dependency("org.codehaus.janino:janino:3.0.14")
             dependency("org.dbunit:dbunit:2.6.0")
+
+            // dependency override to test CRDB Dialect via custom jar
+            dependency("org.hibernate:hibernate-core:5.5.0-SNAPSHOT")
+            //dependency("org.hibernate.common:hibernate-common-annotations:5.1.0.Final")
         }
     }
 
