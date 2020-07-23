@@ -143,7 +143,6 @@ configure(javaProjects) {
 
             // dependency override to test CRDB Dialect via custom jar
             dependency("org.hibernate:hibernate-core:5.5.0-SNAPSHOT")
-            //dependency("org.hibernate.common:hibernate-common-annotations:5.1.0.Final")
         }
     }
 
